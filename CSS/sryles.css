@@ -1,0 +1,62 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+section {
+    height: 100vh;
+}
+
+section::before {
+    content: "";
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translatex(-50%) skew(0, -10deg);
+    width: 300%;
+    height: 100%;
+    background-color: #0075ff;
+    z-index: -1;
+    animation: waving 5s ease-in-out infinite alternate;
+    border-radius: 50%;
+}
+
+@keyframes waving {
+    from {
+        transform: translatex(-50%) skew(0, -10deg);
+    }
+    to {
+        transform: translatex(-30%) skew(10deg, 0);
+    }
+}
+
+
+.card {
+    width: 300px;
+    padding: 20px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #ddd;
+}
+
+.card img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.card h2 {
+    margin: 0;
+    line-height: 1;
+}
+
+.card p {
+    margin: 0;
+}
